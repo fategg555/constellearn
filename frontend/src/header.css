@@ -1,9 +1,22 @@
-.header {
+header {
     background-color: #3943B7;
-    height: 18vh;
+    min-height: 50px;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+img {
+    padding: 10px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
 }
