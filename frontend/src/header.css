@@ -1,6 +1,6 @@
 header {
     background-color: #3943B7;
-    min-height: 50px;
+    min-height: 65px;
     height: 10vh;
     width: 100vw;
     display: flex;
@@ -8,10 +8,30 @@ header {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
+    position: sticky;
+    top: 0px;
+}
+
+header h1 {
+    justify-self: center;
+    border-style: solid;
+    border-width: 2px;
 }
 
 img {
     padding: 10px;
+    max-height: 50px;
+}
+
+.center {
+    display: flex;
+    position: static;
+    top: 0px;
+}
+
+.center h1 {
+    margin-left: 20%;
+    top: -1vh;
 }
 
 button {
@@ -34,4 +54,10 @@ button:hover {
     justify-content: end;
     align-items: center;
     min-width: 40vw;
+}
+
+@media (width <= 800px) {
+    .user img, p {
+        display: none;
+    }
 }

@@ -41,7 +41,9 @@ function Header() {
     return (
         <header> 
             <img src="../public/menu-icon.png" alt="menu icon"></img>
-            <h1> Constellearn </h1>
+            <div class="center">
+                <h1> Constellearn </h1>
+            </div>
             <div class="user"> 
                 { user ? ( 
                     <>
