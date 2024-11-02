@@ -4,31 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth"
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDBr0xS9zNdz2cpvFOuDw9S0cjYgxIUWuM",
-  authDomain: "constellearn.firebaseapp.com",
-  projectId: "constellearn",
-  storageBucket: "constellearn.firebasestorage.app",
-  messagingSenderId: "457762135766",
-  appId: "1:457762135766:web:75b10bcf58844099a57377",
-  measurementId: "G-5TR3MN7KC8",
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log("User is signed in");
-  } else {
-    console.log("User is signed out");
-  }
-});
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
