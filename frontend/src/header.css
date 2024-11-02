@@ -13,6 +13,10 @@ img {
     padding: 10px;
 }
 
+button {
+    background-color: var(--navy-blue   );
+}
+
 .user {
     display: flex;
     flex-direction: row;
