@@ -1,5 +1,5 @@
 * {
-  font-family: "Arial";
+  font-family: "Roboto";
   color: var(--light-text);
 }
 
@@ -29,4 +29,22 @@ h1 {
   --navy-blue: #150578;
   --light-text: #DCCFEC;
   --dark-text: #DDC4DD;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }

@@ -7,6 +7,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
 }
 
 img {
@@ -15,12 +16,22 @@ img {
 
 button {
     background-color: var(--navy-blue   );
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: small;
+    transition: 0.1s;
+    margin: 20px;
+}
+
+button:hover {
+    font-size: medium;
 }
 
 .user {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
-    width: 20vw;
+    min-width: 40vw;
 }

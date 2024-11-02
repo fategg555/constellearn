@@ -47,10 +47,10 @@ function Header() {
                     <>
                         <img src={user.photoURL} alt="User profile" />
                         <p> {user.displayName} </p>
-                        <button onClick={handleSignOut}>Sign Out</button>
+                        <button onClick={handleSignOut}> Sign Out </button>
                     </>
                 ) : ( 
-                    <button onClick={handleSignIn}>Sign in with Google</button>
+                    <button onClick={handleSignIn}> Sign in with Google </button>
                 )
                 }
             </div>
