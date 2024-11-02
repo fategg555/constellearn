@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {user ? (
         <div>
           <h1>Welcome, {user.displayName}</h1>
