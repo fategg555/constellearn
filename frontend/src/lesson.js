@@ -3,9 +3,9 @@ import './lesson.css';
 
 function Lesson() {
     return (
-        <dvi>
+        <div>
 
-        </dvi>
+        </div>
     )
 }
 
