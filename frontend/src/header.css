@@ -12,21 +12,14 @@ header {
     top: 0px;
 }
 
-header h1 {
-    justify-self: center;
-    border-style: solid;
-    border-width: 2px;
-}
-
 img {
     padding: 10px;
     max-height: 50px;
 }
 
 .center {
-    display: flex;
-    position: static;
-    top: 0px;
+    margin-left: 20%;
+    justify-self: center;
 }
 
 .center h1 {
@@ -54,6 +47,7 @@ button:hover {
     justify-content: end;
     align-items: center;
     min-width: 40vw;
+    margin-right: 10px;
 }
 
 @media (width <= 800px) {
