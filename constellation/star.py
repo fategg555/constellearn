@@ -1,0 +1,43 @@
+class Objective(object):
+    def __init__(self, name):
+        self.name = name
+        self.complete = False
+    
+    @property
+    def completed(self):
+        return self.complete
+    
+    @completed.setter
+    def completed(self, val):
+        self.complete = val
+    
+class StarData:
+    def __init__(self):
+        self.progress = 0.0
+        self.objectives = {}
+    
+    def add_objective(self, objective):
+        self[objective.name] = objective
+
+    
+    def update_progress(self, objective):
+        try:
+            self[objective].complete(True)
+        except KeyError:
+            raise "objective not in star"
+        
+        c = 0
+        for o in self.objectives:
+            if self[o].complete:
+                c += 1
+        
+        self.progress = c/len(self.objectives)
+
+    def __repr__(self) -> str:
+        pass
+
+
+class Star:
+    def __init__(self, name, star_data: StarData):
+        self.name = name
+        self.star_data
