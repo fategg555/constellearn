@@ -4,6 +4,7 @@ import Header from './header';
 import React, { useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import InfiniteScroll from './infinite-scroll';
 
 function App() {
   return (

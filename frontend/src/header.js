@@ -21,23 +21,24 @@ const provider = new GoogleAuthProvider()
 function Header() {
     const [user, setUser] = useState(null);
 
-  const handleSignIn = async () => {
+    const handleSignIn = async () => {
     try {
-      const result = await signInWithPopup(auth, provider);
-      setUser(result.user); // Set user information after successful login
+        const result = await signInWithPopup(auth, provider);
+        setUser(result.user); // Set user information after successful login
     } catch (error) {
-      console.error("Error signing in: ", error);
+        console.error("Error signing in: ", error);
     }
-  };
+    };
   
-  const handleSignOut = async () => {
+    const handleSignOut = async () => {
     try {
-      await signOut(auth);
-      setUser(null); // Clear user information after logout
+        await signOut(auth);
+        setUser(null); // Clear user information after logout
     } catch (error) {
-      console.error("Error signing out: ", error);
+        console.error("Error signing out: ", error);
     }
-  };
+    };
+
     return (
         <header> 
             <img src="../public/menu-icon.png" alt="menu icon"></img>
