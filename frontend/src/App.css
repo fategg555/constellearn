@@ -269,6 +269,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--dark-bg);
 }
 
 .progress #constText{
@@ -281,6 +282,8 @@ h4 {
 
 .infoBox{
   padding-top: 2%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -292,4 +295,8 @@ h4 {
 
 .infoBox h3{
   padding-top: 5%;
+}
+
+#constText {
+  color: var(--dark-bg);
 }

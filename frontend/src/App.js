@@ -17,20 +17,20 @@ function App() {
     setIsInLesson(false);
   };
 
-  fetch(`/constellation/${name}`)
-            .then((res) => res.json())
-            .then((json) => {
-                this.setState({
-                    items: json,
-                    DataisLoaded: true,
-                });
-            });
+  // fetch("/constellation")
+  //           .then((res) => res.json())
+  //           .then((json) => {
+  //               this.setState({
+  //                   items: json,
+  //                   DataisLoaded: true,
+  //               });
+  //           });
 
   return (
     <div className="App">
       <Header onExitLesson={handleExitLesson} />
       { isInLesson ? (
-        <Lesson name={""}/>
+        <Lesson name={"item.name"}/>
       ) : (
         <InfiniteScroll onEnterLesson={handleEnterLesson} />
       )}
