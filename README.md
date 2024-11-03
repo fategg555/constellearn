@@ -1,2 +1,3 @@
-# hacknc2024
-currently unnamed hacknc2024 repository 
+# Constellearn
+Learn new concepts while collecting constellations!
+Developed during HackNC 2024
