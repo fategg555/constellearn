@@ -62,7 +62,7 @@ class Star:
     
     @staticmethod
     def from_ref(ref):
-        return ref._data
+        return ref
     
     def update():
         pass

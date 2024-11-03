@@ -1,7 +1,7 @@
 import firebase_admin
 from firebase_admin import firestore
 from firebase_admin import credentials
-from google.cloud.firestore_v1 import CollectionReference, DocumentReference
+from google.cloud.firestore_v1 import CollectionReference, DocumentReference, FieldFilter
 
 from constellation import constellation, star
 
@@ -18,8 +18,7 @@ class Database:
         return self.db.collection("stars")
     
     def find_const(self, name):
-        col = self.get_constellations_col().document(name)
-        return col.get() if col.get().exists else None
+        return self.get_constellations_col().where(filter=FieldFilter())
 
     def find_star(self, star_name):
         col = self.get_stars_col().document(star_name)
@@ -40,4 +39,4 @@ if __name__ == '__main__':
     d = Database()
     x = d.find_const("cassiopeia")
 
-    print(x.get('stars').get('star1').update({"small": x.get("stars").get("star")}))
+    print(x)

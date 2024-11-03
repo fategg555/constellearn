@@ -17,5 +17,4 @@ def test(id):
 
 if __name__ == "__main__":
     c = db.find_const('cassiopeia')
-    s = db.find_star('star1')
-    print(Star.from_ref(c))
+    print(c)
