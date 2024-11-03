@@ -12,35 +12,13 @@ function Lesson() {
                 </div>
                 <div class="constellation">
                     {/* row 1 */}
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={1} />
-                    <Star dis={0} />
-                    {/* row 2 */}
-                    <Star dis={0} />
-                    <Star dis={1} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={1} />
-                    {/* row 3 */}
-                    <Star dis={1} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    {/* row 4 */}
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={1} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    {/* row 5 */}
-                    <Star dis={0} />
-                    <Star dis={1} />
-                    <Star dis={0} />
-                    <Star dis={0} />
-                    <Star dis={0} />
+                    <Star top={"1vh"} left={"40vw"} />
+                    <Star top={"8vh"} left={"31vw"} />
+                    <Star top={"19vh"} left={"26vw"} /> 
+                    <Star top={"29vh"} left={"22vw"} />
+                    <Star top={"39vh"} left={"12vw"} />
+                    <Star top={"47vh"} left={"20vw"} />
+                    <Star top={"55vh"} left={"8vw"} />
                 </div>
                 <div>
 

@@ -157,11 +157,6 @@ h1 {
   height: 450px;
   border-radius: 10px;
   box-shadow: inset 0px 0px 90px 0px #000000;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  row-gap: 0px;
-  column-gap: 0px;
   justify-content: center;
   align-items: center;
 }
