@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './header';
 import Lesson from './lesson';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InfiniteScroll from './infinite-scroll';
 
 function App() {
@@ -17,11 +17,20 @@ function App() {
     setIsInLesson(false);
   };
 
+  fetch(`/constellation/${name}`)
+            .then((res) => res.json())
+            .then((json) => {
+                this.setState({
+                    items: json,
+                    DataisLoaded: true,
+                });
+            });
+
   return (
     <div className="App">
       <Header onExitLesson={handleExitLesson} />
       { isInLesson ? (
-        <Lesson />
+        <Lesson name={""}/>
       ) : (
         <InfiniteScroll onEnterLesson={handleEnterLesson} />
       )}
