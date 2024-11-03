@@ -19,8 +19,8 @@ function InfiniteScrollComponent({ onEnterLesson }) {
     };
 
     return (
-        <div onClick={onEnterLesson}>
-            <div className="inf" ref={infRef}>
+        <div>
+            <div className="inf" ref={infRef} onClick={onEnterLesson} >
                 <Thumbnail name="URSA MINOR" />
                 <Thumbnail name="BIG DIPPER" />
                 <Thumbnail name="SCORPIUS" />
