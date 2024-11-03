@@ -3,7 +3,7 @@ import Thumbnail from './thumbnail';
 import up from './images/up.png';
 import down from './images/dowen.png';
 
-function InfiniteScrollComponent() {
+function InfiniteScrollComponent({ onEnterLesson }) {
     const infRef = useRef(null);
 
     const handlePrevClick = () => {
@@ -19,7 +19,7 @@ function InfiniteScrollComponent() {
     };
 
     return (
-        <>
+        <div onClick={onEnterLesson}>
             <div className="inf" ref={infRef}>
                 <Thumbnail name="URSA MINOR" />
                 <Thumbnail name="BIG DIPPER" />
@@ -33,7 +33,7 @@ function InfiniteScrollComponent() {
                     <img src={down} alt="down" />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

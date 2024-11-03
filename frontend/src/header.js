@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-function Header() {
+function Header({ onExitLesson }) {
     const [user, setUser] = useState(null);
 
     const handleSignIn = async () => {
@@ -40,8 +40,8 @@ function Header() {
     };
 
     return (
-        <header> 
-            <img src={menu} alt="menu icon"/>
+        <header>
+            <img src={menu} alt="menu icon" onClick={onExitLesson}/>
             <div class="center">
                 <h1> Constellearn </h1>
             </div>

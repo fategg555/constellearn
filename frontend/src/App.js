@@ -6,16 +6,25 @@ import React, { useState } from "react";
 import InfiniteScroll from './infinite-scroll';
 
 function App() {
-  const inLesson = false;
+  const [isInLesson, setIsInLesson] = useState(false);
+
+  // Function to handle the click event in InfiniteScroll
+  const handleEnterLesson = () => {
+    setIsInLesson(true);
+  };
+
+  const handleExitLesson = () => {
+    setIsInLesson(false);
+  };
 
   return (
     <div className="App">
-      <Header />
-      { inLesson ? (
+      <Header onExitLesson={handleExitLesson} />
+      { isInLesson ? (
         <Lesson />
       ) : (
-        <InfiniteScroll />
-      ) }
+        <InfiniteScroll onEnterLesson={handleEnterLesson} />
+      )}
     </div>
   );
 }
