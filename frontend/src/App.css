@@ -263,3 +263,33 @@ h4 {
   font-weight: 700;
   font-style: normal;
 }
+
+.progress{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress #constText{
+  height: 30vh;
+  width: 62.5vw;
+  font-size: 3vh;
+  justify-self: center;
+  align-self: center;
+}
+
+.infoBox{
+  padding-top: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoBox h2, h3{
+  justify-self: center;
+  width: 70%;
+}
+
+.infoBox h3{
+  padding-top: 5%;
+}
