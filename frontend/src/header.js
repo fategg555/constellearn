@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import user, { handles } from './App.js';
-import './header.css';
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 
@@ -41,7 +40,7 @@ function Header() {
 
     return (
         <header> 
-            <img src="../public/menu-icon.png" alt="menu icon"></img>
+            <img src="../public/menu.png" alt="menu icon"></img>
             <div class="center">
                 <h1> Constellearn </h1>
             </div>
@@ -54,8 +53,7 @@ function Header() {
                     </>
                 ) : ( 
                     <button onClick={handleSignIn}> Sign in with Google </button>
-                )
-                }
+                ) }
             </div>
         </header>
     )

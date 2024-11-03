@@ -8,9 +8,16 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/
 import InfiniteScroll from './infinite-scroll';
 
 function App() {
+  const inLesson = false;
+
   return (
     <div className="App">
       <Header />
+      { inLesson ? (
+        <lesson />
+      ) : (
+        <InfiniteScroll />
+      ) }
       <lesson />
     </div>
   );

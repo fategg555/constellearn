@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Thumbnail from './thumbnail';
 
 function infiniteScroll() {
     return (
-        <div>
+        <div class="inf">
+            <Thumbnail />
+            <Thumbnail />
+            <Thumbnail />
             {/* <InfiniteScroll
                 dataLength={items.length}
                 next={fetchData}
