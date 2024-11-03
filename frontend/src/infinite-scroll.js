@@ -1,28 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Thumbnail from './thumbnail';
+import up from './images/up.png';
+import down from './images/dowen.png';
 
 function infiniteScroll() {
+    let inf = document.querySelector('.inf');
+    let nextBtn = document.querySelector("next");
+
     return (
-        <div class="inf">
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
-            {/* <InfiniteScroll
-                dataLength={items.length}
-                next={fetchData}
-                hasMore={true} // Replace with a condition based on your data source
-                loader={<p> Loading... </p>}
-                endMessage={<p> You've unlocked the wisdom of the Cosmos ...  </p>}
-            >
-            <ul>
-                {items.map(item => (
-                <li key={item.id}>{item.name}</li>
-                ))}
-            </ul>
-            </InfiniteScroll>
-            {error && <p>Error: {error.message}</p>} */}
-        </div>
+        <>
+            <div class="inf">
+                <Thumbnail name={"URSA MINOR"} />
+                <Thumbnail name={"BIG DIPPER"}/>
+                <Thumbnail name={"SCORPIUS"}/>
+            </div>
+            <div class="buttons">
+                <div class="prev" onClick={inf.prepend(document.querySelector('Thumbnail:last-child'))}>
+                    <img src={up} alt="up" />
+                </div>
+                <div class="next" onClick={inf.append(document.querySelector('Thumbnail:first-child'))}>
+                    <img src={down} alt="down" />
+                </div>
+            </div>
+        </>
     )
 }
   

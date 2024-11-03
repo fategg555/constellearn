@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Thumbnail() {
+function Thumbnail({name="PLACEHOLDER", rating="AWAITING RATING", img}) {
     return (
         <div class="thumbnail">
             <div class="name roboto-light">
-                <h2> CASSIOPEIA </h2>
+                <h2> {name} </h2>
             </div>
-            <div class="rating">
-                <p> DIFFICULTY: MEDIUM </p>
+            <div class="name roboto-light">
+                <h2> {rating} </h2>
             </div>
         </div>
     )

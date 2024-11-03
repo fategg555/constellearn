@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import InfiniteScroll from './infinite-scroll';
 
 function App() {
-  const inLesson = true;
+  const inLesson = false;
 
   return (
     <div className="App">

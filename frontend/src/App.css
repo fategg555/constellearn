@@ -79,6 +79,7 @@ h1 {
 /* INFINITE SCROLL */
 
 .inf {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -117,6 +118,55 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  height: 420px;
+  width: 500px;
+  background-color: white;
+}
+
+.rating h3 {
+  font-family: "Roboto";
+  font-size: 8vh;
+  margin: 20px;
+}
+
+.inf :not(:first-child) {
+  display: none;
+}
+
+.buttons {
+  position: absolute;
+  left: 2vw;
+  top: 40vh;
+  background-color: var(--dark-text);
+  height: 150px;
+  width: 70px;
+  border-radius: 30px;
+}
+
+h4 {
+  font-family: "Roboto";
+  color: var(--dark-bg);
+  margin: 0px;
+}
+
+.bold {
+  font-size: 40px;
+}
+
+.next {
+  border-radius: 50px;
+  background-color: (var(--dark-text));
+  height: 100px;
+  width: 100px;
+}
+
+.next:hover {
+  background-color: (var(--violet-blue));
+}
+
+.prev {
+  border-radius: 50px;
+  background-color: (var(--dark-text));
 }
 
 /* LESSONS */
@@ -164,7 +214,6 @@ h1 {
 .lesson .constellation img{
   margin: 0px;
 }
-
 
 /* FONTS */
 
