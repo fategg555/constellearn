@@ -1,31 +1,40 @@
-import React, { useState, useEffect, useRef } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useRef } from 'react';
 import Thumbnail from './thumbnail';
 import up from './images/up.png';
 import down from './images/dowen.png';
 
-function infiniteScroll() {
-    let inf = document.querySelector('.inf');
-    let nextBtn = document.querySelector("next");
+function InfiniteScrollComponent() {
+    const infRef = useRef(null);
+
+    const handlePrevClick = () => {
+        if (infRef.current) {
+            infRef.current.prepend(infRef.current.querySelector('.thumbnail:last-child'));
+        }
+    };
+
+    const handleNextClick = () => {
+        if (infRef.current) {
+            infRef.current.append(infRef.current.querySelector('.thumbnail:first-child'));
+        }
+    };
 
     return (
         <>
-            <div class="inf">
-                <Thumbnail name={"URSA MINOR"} />
-                <Thumbnail name={"BIG DIPPER"}/>
-                <Thumbnail name={"SCORPIUS"}/>
+            <div className="inf" ref={infRef}>
+                <Thumbnail name="URSA MINOR" />
+                <Thumbnail name="BIG DIPPER" />
+                <Thumbnail name="SCORPIUS" />
             </div>
-            <div class="buttons">
-                <div class="prev" onClick={inf.prepend(document.querySelector('Thumbnail:last-child'))}>
+            <div className="buttons">
+                <div className="prev" onClick={handlePrevClick}>
                     <img src={up} alt="up" />
                 </div>
-                <div class="next" onClick={inf.append(document.querySelector('Thumbnail:first-child'))}>
+                <div className="next" onClick={handleNextClick}>
                     <img src={down} alt="down" />
                 </div>
             </div>
         </>
-    )
+    );
 }
-  
-export default infiniteScroll;
-  
+
+export default InfiniteScrollComponent;
