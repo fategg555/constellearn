@@ -1,10 +1,20 @@
+import json
+
 class Constellation:
-    def __init__(self, name):
+    # type StarType = dict[int, int]
+    def __init__(self, name, pic_url):
         self.name = name
+        self.image = pic_url
         self.stars = {}
     
-    def add_star(self, star):
-        self.stars[star.name] = star
+    def add_star(self, star_name, progress, questions):
+        self.stars[star_name] = {
+            "progress": progress, 
+            "questions": questions,
+        }
+    
+    def update_star(self, star_name, progress):
+        self.stars[star_name].progress = progress
     
     def stars_dict(self):
         stars_d = {}
@@ -14,22 +24,28 @@ class Constellation:
 
     @staticmethod
     def from_dict(source):
-        pass
-
-    @staticmethod
-    def from_ref(ref):
-        pass
+        data = json.loads(str(source))
+        c = Constellation(data["name"], data["image"])
+        stars = data["stars"]
+        for star in stars:
+            c.add_star(star, stars[star]["progress"], stars[star]["questions"])
+        return c
 
     def to_dict(self):
         d = {
             "name": self.name,
-            "stars": self.stars_dict()
+            "image": self.image,
+            "stars": self.stars
         }
         return d
+    
+    def __repr__(self) -> str:
+        return str(self.to_dict()).replace('\'', '\"')
 
 if __name__ == "__main__":
-    from star import Star, StarData
-    s = Star("star1", star_data=StarData())
-    c = Constellation("test")
-    c.add_star(s)
-    print(c.to_dict())
+    c = Constellation("cass", "dkfka")
+    c.add_star("first checkpoint", 0, [])
+    x = c.to_dict()
+    x = str(x).replace('\'', '\"')
+    y = Constellation.from_dict(x)
+    print(y.to_dict())

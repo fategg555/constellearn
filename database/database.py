@@ -7,7 +7,7 @@ from google.cloud.firestore_v1 import CollectionReference, DocumentReference, Fi
 
 class Database:
     def __init__(self):
-        cred = credentials.Certificate("./key.json")
+        cred = credentials.Certificate("./database/key.json")
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
 

@@ -11,9 +11,9 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/test/<id>", methods=["POST"])
-def test(id):
-    print()
+@app.route("/constellation/<name>", methods=["get"])
+def test(name):
+    pass
 
 if __name__ == "__main__":
     c = db.find_const('cassiopeia')
