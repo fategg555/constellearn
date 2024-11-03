@@ -86,6 +86,19 @@ h1 {
   align-items: center;
 }
 
+.progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+
 .thumbnail {
   background-color: var(--navy-blue);
   width: 80vw;
