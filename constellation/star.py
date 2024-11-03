@@ -32,7 +32,18 @@ class StarData:
                 c += 1
         
         self.progress = c/len(self.objectives)
+    
+    def objectives_dict(self):
+        d = {}
+        for o in self.objectives:
+            d[o] = {"name": d[o].name,
+                    "completed": d[o].completed}
 
+    def to_dict(self):
+        return {
+            "progress": self.progress,
+            "objectives": self.objectives_dict()
+        }
     def __repr__(self) -> str:
         pass
 
@@ -45,5 +56,13 @@ class Star:
     def to_dict(self):
         d = {
             "name": self.name,
-            "data": self.star_data
+            "data": self.star_data.to_dict()
         }
+        return d
+    
+    @staticmethod
+    def from_ref(ref):
+        return ref._data
+    
+    def update():
+        pass
