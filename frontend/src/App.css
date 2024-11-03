@@ -10,7 +10,7 @@ body {
 /* HEADER */
 
 header {
-  background-color: #3943B7;
+  background-color: var(--violet-blue);
   min-height: 65px;
   height: 10vh;
   width: 100%;
@@ -21,6 +21,8 @@ header {
   white-space: nowrap;
   position: sticky;
   top: 0px;
+  box-shadow: 0px 0px 20px 10px var(--dark-bg);
+  z-index: 1;
 }
 
 img {
@@ -98,8 +100,7 @@ h1 {
 
 .thumbnail h2 {
   font-family: "Roboto";
-  font-weight: 900;
-  font-size: 5vh;
+  font-size: 8vh;
   margin: 20px;
 }
 
@@ -117,6 +118,58 @@ h1 {
   flex-direction: row;
   justify-content: end;
 }
+
+/* LESSONS */
+
+.lesson {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: var(--navy-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  height: 100vw;
+  width: 90vw;  
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 10px 5px var(--dark-text);
+}
+
+.lesson .data {
+  width: 30%;
+  max-height: 30vh;
+  margin: 15px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lesson .data h1 {
+  margin: 10px;
+  padding: 0px;
+  font-size: 10vh;
+}
+
+.lesson .constellation {
+  background-color: var(--dark-bg);
+  width: 90%;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 90px 0px #000000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 0px;
+  column-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.lesson .constellation img{
+  margin: 0px;
+}
+
 
 /* FONTS */
 

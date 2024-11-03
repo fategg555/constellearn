@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './header';
-import lesson from './lesson';
+import Lesson from './lesson';
 import React, { useState } from "react";
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import InfiniteScroll from './infinite-scroll';
 
 function App() {
-  const inLesson = false;
+  const inLesson = true;
 
   return (
     <div className="App">
       <Header />
       { inLesson ? (
-        <lesson />
+        <Lesson />
       ) : (
         <InfiniteScroll />
       ) }
-      <lesson />
     </div>
   );
 }

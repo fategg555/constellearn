@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import user, { handles } from './App.js';
+import inLesson from './App.js';
 import { initializeApp } from "firebase/app";
+import menu from './images/earth.png';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 
 const firebaseConfig = {
@@ -15,7 +16,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider()
+const provider = new GoogleAuthProvider();
 
 function Header() {
     const [user, setUser] = useState(null);
@@ -40,7 +41,7 @@ function Header() {
 
     return (
         <header> 
-            <img src="../public/menu.png" alt="menu icon"></img>
+            <img src={menu} alt="menu icon"/>
             <div class="center">
                 <h1> Constellearn </h1>
             </div>
