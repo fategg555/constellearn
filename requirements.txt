@@ -37,7 +37,6 @@ pycparser==2.22
 pycryptodome==3.4.3
 PyJWT==2.9.0
 pyparsing==3.2.0
-Pyrebase==3.0.27
 python-dotenv==1.0.1
 python-jwt==2.0.1
 requests==2.32.3

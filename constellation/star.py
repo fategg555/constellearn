@@ -40,4 +40,10 @@ class StarData:
 class Star:
     def __init__(self, name, star_data: StarData):
         self.name = name
-        self.star_data
+        self.star_data = star_data
+    
+    def to_dict(self):
+        d = {
+            "name": self.name,
+            "data": self.star_data
+        }
