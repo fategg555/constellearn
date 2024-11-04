@@ -21,8 +21,8 @@ function Lesson({name="name", starPattern}) {
                     <Star top={"360px"} left={"120px"} />
                 </div>
                 <section class="infoBox">
-                    <h2> Read Text: Lorem ipsum odor amet, consectetuer adipiscing elit. Primis himenaeos ullamcorper ornare ultricies efficitur mollis fames. Ac nunc in ridiculus potenti urna eu. Lacinia turpis lacus eleifend ornare scelerisque. Ligula elementum semper suscipit cras commodo purus erat. Finibus iaculis tellus cursus finibus sapien dolor dignissim. Praesent malesuada gravida leo montes feugiat nam amet mollis. Amet nec nisl molestie augue senectus faucibus. Semper etiam torquent laoreet risus sodales etiam volutpat porttitor.</h2>
-                    <h3> Question below:  Lorem ipsum odor amet, consectetuer adipiscing elit. Primis himenaeos ullamcorper ornare ultricies efficitur mollis fames.?</h3>
+                    <h2> Ursa Minor (Latin for 'Lesser Bear', contrasting with Ursa Major), also known as the Little Bear, is a constellation located in the far northern sky. As with the Great Bear, the tail of the Little Bear may also be seen as the handle of a ladle, hence the North American name, Little Dipper: seven stars with four in its bowl like its partner the Big Dipper. Ursa Minor was one of the 48 constellations listed by the 2nd-century astronomer Ptolemy, and remains one of the 88 modern constellations. Ursa Minor has traditionally been important for navigation, particularly by mariners, because of Polaris being the north pole star. </h2>
+                    <h3> Why has Ursa Minor been important for navigation? </h3>
                 </section>
                 <div class="progress">
                     <textarea id="constText" name = "constText"></textarea>

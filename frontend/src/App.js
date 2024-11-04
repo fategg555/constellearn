@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <Header onExitLesson={handleExitLesson} />
       { isInLesson ? (
-        <Lesson name={"item.name"}/>
+        <Lesson name={"URSA MINOR"}/>
       ) : (
         <InfiniteScroll onEnterLesson={handleEnterLesson} />
       )}
